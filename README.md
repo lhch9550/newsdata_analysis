@@ -8,7 +8,7 @@
 BERTSum 모델은 BERT의 구조 위에 두 개의 inter-sentence Transformer 레이어를 추가한 형태로 설계되었다. 이를 더욱 최적화하여 BertSumExt 요약 모델로 활용할 수 있다.
 Pre-trained BERT를 문서 요약(task-specific) 모델로 활용하기 위해서는 여러 개의 문장을 하나의 입력으로 처리할 수 있어야 하며, 각 문장에 대한 개별적인 정보를 효과적으로 추출할 수 있도록 입력 형식을 조정해야 한다. 이를 위해, 입력 문서의 각 문장 앞에 [CLS] 토큰을 삽입하고, 문장마다 고유한 segment embeddings을 부여하는 interval segment embeddings 기법을 적용한다. 이를 통해 BERT가 문서 내 개별 문장의 관계를 보다 정교하게 학습할 수 있도록 한다.
 
-![Image](https://github.com/lhch9550/news-summarization-KeyBERT/issues/2#issue-2826812567)
+https://github.com/lhch9550/news-summarization-KeyBERT/issues/2#issue-2826812567
 
 본 실험에서는 해당 모델을 통해 요약된 뉴스 기사를 한국언론진흥재단에서 구축한 방대한 뉴스기사 말뭉치로 학습한 KPF-BERT를 이용하여 특히 뉴스기사 요약에 특화된 모델로 한국어 데이터 셋은 AI-HUB에서 제공하는 문서요약 텍스트를 사용하였음
 

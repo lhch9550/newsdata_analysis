@@ -1,18 +1,4 @@
-### 1. 요약 모델
-
-BERTSum 모델은 BERT의 구조 위에 두 개의 inter-sentence Transformer 레이어를 추가한 형태로 설계되었다. 이를 더욱 최적화하여 BertSumExt 요약 모델로 활용할 수 있다.
-Pre-trained BERT를 문서 요약(task-specific) 모델로 활용하기 위해서는 여러 개의 문장을 하나의 입력으로 처리할 수 있어야 하며, 각 문장에 대한 개별적인 정보를 효과적으로 추출할 수 있도록 입력 형식을 조정해야 한다. 
-입력 문서의 각 문장 앞에 [CLS] 토큰을 삽입하고, 문장마다 고유한 segment embeddings을 부여하는 interval segment embeddings 기법을 적용한다. 이를 통해 BERT가 문서 내 개별 문장의 관계를 보다 정교하게 학습할 수 있도록 한다.
-기존의 BERT를 summariaztion에 바로 적용하기에 BERT는 MLM으로 훈련되기 때문에 출력 벡터가 토큰단위로 출력되게 된다. 
-이러한 한계를 극복하고자 요약 task에서는 문장 수준의 표현을 다루기 위해 BERT의 입력 데이터 형태를 수정하여 사용합니다.
-
-![Image](https://github.com/user-attachments/assets/6c55ebc3-640b-48da-bb10-3f5e1f49d26c)
-
-본 실험에서는 해당 모델을 통해 요약된 뉴스 기사를 한국언론진흥재단에서 구축한 방대한 뉴스기사 말뭉치로 학습한 KPF-BERT를 이용하여 특히 뉴스기사 요약에 특화된 모델로 한국어 데이터 셋은 AI-HUB에서 제공하는 문서요약 텍스트를 사용하였음
-뉴스 기사 3줄 요약인 KPF-BERTSum은 KPF-BERT Text Summarization의 준말로 BERT의 사전학습 모델을 이용한 텍스트 요약 모델이다.
-
-
-### 2. KeyBERT를 통한 키워드 추출 모델
+### 1. KeyBERT를 통한 키워드 추출 모델
 
 KeyBERT는 BERT를 기반으로 문서의 주제를 효과적으로 파악하고, 문서 내에서 의미적으로 중요한 키워드를 추출하는 모델이다. 
 이를 위해 문서의 임베딩을 생성하고, 다양한 N-gram 단위를 고려하여 단어 및 구(phrase)를 벡터화한 후, 문서와의 코사인 유사도를 계산하여 가장 관련성이 높은 키워드를 선정한다. 

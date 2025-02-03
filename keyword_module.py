@@ -20,8 +20,8 @@ def encode_text(text):
                               truncation=True,
                               max_length=512)
     outputs = custom_model(**inputs)
-    embeddings = outputs.last_hidden_state.mean(dim=1)  # 🔹 평균 풀링
-    return embeddings.detach().numpy().reshape(1, -1)  # 🔹 2D 배열로 변환 (1, hidden_size)
+    embeddings = outputs.last_hidden_state.mean(dim=1)  # 평균 풀링
+    return embeddings.detach().numpy().reshape(1, -1)  # 2D 배열로 변환 (1, hidden_size)
 
 def keyword_ext(text):
     """주어진 텍스트에서 키워드를 추출하는 함수"""
@@ -95,7 +95,7 @@ def mmr(doc_embedding, candidate_embeddings, words, top_n, diversity):
         mmr = (1 - diversity) * candidate_similarities - diversity * target_similarities.reshape(-1, 1)
         mmr_idx = candidates_idx[np.argmax(mmr)]
 
-        # 🔹 업데이트
+        # 업데이트
         keywords_idx.append(mmr_idx)
         candidates_idx.remove(mmr_idx)
 

@@ -16,7 +16,7 @@ KeyBERT는 BERT를 기반으로 문서의 주제를 효과적으로 파악하고
 이를 위해 문서의 임베딩을 생성하고, 다양한 N-gram 단위를 고려하여 단어 및 구(phrase)를 벡터화한 후, 문서와의 코사인 유사도를 계산하여 가장 관련성이 높은 키워드를 선정한다. 
 즉, 문서의 의미를 가장 잘 대표하는 단어들을 도출함으로써ㅜ효과적인 키워드 추출을 가능하게 하는 원리이다. 
 
-관련하여 [다음 페이지](https://heeya-stupidbutstudying.tistory.com/entry/DL-keyword-extraction-with-KeyBERT-%EA%B0%9C%EC%9A%94%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-1)를 참조하였다. 
+알고리즘 관련한 설명은 [다음 페이지](https://heeya-stupidbutstudying.tistory.com/entry/DL-keyword-extraction-with-KeyBERT-%EA%B0%9C%EC%9A%94%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-1)를 참조하였다. 
 
 KeyBERT의 General Flow는 다음과 같다. 
 

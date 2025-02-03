@@ -1,4 +1,4 @@
-# BERT를 이용한 뉴스기사 요약 및 핵심 키워드 추출
+<img width="832" alt="image" src="https://github.com/user-attachments/assets/6cbad1c6-bbc9-47e4-8968-403e8878aefb" /># BERT를 이용한 뉴스기사 요약 및 핵심 키워드 추출
 
 ### 1. 요약 모델
 
@@ -19,6 +19,9 @@ KeyBERT는 BERT를 기반으로 문서의 주제를 효과적으로 파악하고
 즉, 문서의 의미를 가장 잘 대표하는 단어들을 도출함으로써, 효과적인 키워드 추출을 가능하게 한다.
 
 관련하여 [다음 페이지](https://heeya-stupidbutstudying.tistory.com/entry/DL-keyword-extraction-with-KeyBERT-%EA%B0%9C%EC%9A%94%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-1)를 참조하였다. 
+
+KeyBERT의 General Flow는 다음과 같다. 
+
 
 코사인 유사도를 활용한 키워드 선정
 문서와 키워드 간의 유사도를 측정하기 위해 코사인 유사도를 사용한다. 코사인 유사도는 두 벡터 간의 각도를 이용하여 유사도를 측정하는 방법으로, 값이 1에 가까울수록 두 벡터(즉, 문서와 키워드)의 의미가 유사함을 의미한다.

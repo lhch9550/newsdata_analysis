@@ -1,5 +1,3 @@
-<img width="832" alt="image" src="https://github.com/user-attachments/assets/6cbad1c6-bbc9-47e4-8968-403e8878aefb" /># BERT를 이용한 뉴스기사 요약 및 핵심 키워드 추출
-
 ### 1. 요약 모델
 
 BERTSum 모델은 BERT의 구조 위에 두 개의 inter-sentence Transformer 레이어를 추가한 형태로 설계되었다. 이를 더욱 최적화하여 BertSumExt 요약 모델로 활용할 수 있다.
@@ -22,10 +20,13 @@ KeyBERT는 BERT를 기반으로 문서의 주제를 효과적으로 파악하고
 
 KeyBERT의 General Flow는 다음과 같다. 
 
+<img width="832" alt="image" src="https://github.com/user-attachments/assets/6cbad1c6-bbc9-47e4-8968-403e8878aefb" /># BERT를 이용한 뉴스기사 요약 및 핵심 키워드 추출
 
-코사인 유사도를 활용한 키워드 선정
-문서와 키워드 간의 유사도를 측정하기 위해 코사인 유사도를 사용한다. 코사인 유사도는 두 벡터 간의 각도를 이용하여 유사도를 측정하는 방법으로, 값이 1에 가까울수록 두 벡터(즉, 문서와 키워드)의 의미가 유사함을 의미한다.
-그러나 단순히 코사인 유사도가 높은 단어들을 키워드로 선택할 경우, 의미적으로 중복되는 키워드가 많아질 가능성이 있다. 이를 해결하기 위해 KeyBERT는 두 가지 추가적인 방법을 제공한다.
+1) Document-level representation (by document embeddings extracted with BERT)
+2) Phrase-level representation (by word embeddings extracted for N-gram words/phrases and BERT)
+3) Use of cosine similarity to find the words/phrases that are most similar to the document
+  - (optional) MMR or Max Sum Similarity
+4) Extraction of words/phrases that best describe the entire document
 
 ### MMR (Maximal Marginal Relevance)
 

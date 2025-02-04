@@ -19,7 +19,7 @@ Market Intelligence는 다음 **3가지 핵심 기능**을 중심으로 연구 �
 ## 기술 스택
 - **자연어 처리(NLP):** Named Entity Recognition (NER), 토픽 모델링, 워드 임베딩
 - **데이터 분석:** 네트워크 분석, 시각화 기법 적용
-- **대형 언어 모델(LLM):** RAG 기반 검색 및 질의응답 시스템 구축
+- **대형 언어 모델(LLM):** Langchain 및 벡터 DB(FAISS) 기반 검색 및 질의응답 시스템 구축
 
 ```python
 brotlipy==0.7.0

@@ -1,17 +1,27 @@
 # KPF-BERT 사전학습 모델을 활용한 뉴스 주제 분류 모델 구현
 
-### 1. 모델 및 데이터
+## 1. 모델 및 데이터
+한국언론진흥재단이 개발한 KPF-BERT 모델의 CLS 토큰을 기반으로 뉴스 기사에 대한 주제 분류(Task)를 수행할 수 있는 분류 모델을 위한 코드를 작성하였습니다.
 
-한국언론진흥재단이 개발한 kpf-BERT 모델의 cls 토큰을 기반으로 뉴스기사에 대한 주제 분류 task를 수행할 수 있는 분류 모델을 위한 코드를 작성
-- 기존 kpf-BERT 모델과 토크나이저는 git을 통해 다운로드: [빅카인즈 참조](https://github.com/KPF-bigkinds/BIGKINDS-LAB/blob/main/KPF-BERT-CLS/README.md)
-- 학습데이터는 '국립국어원의 뉴스 분류 데이터'를 활용하였음
-- 학습데이터는 기사내용과 분류명을 넣어 제작하였음. 본 실험에서는 세분류에 대해서만 학습을 진행함
-<img width="658" alt="Image" src="https://github.com/user-attachments/assets/7db9664f-ec5f-41ee-89bb-ad9b508d8214" /> 
+- 기존 KPF-BERT 모델과 토크나이저는 Git을 통해 다운로드:[빅카인즈 참조](https://github.com/KPF-bigkinds/BIGKINDS-LAB/blob/main/KPF-BERT-CLS/README.md) 참조
+- 학습 데이터는 **국립국어원의 뉴스 분류 데이터**를 활용하였음
+- 기사 내용과 분류명을 포함하여 학습 데이터를 제작
+- 본 실험에서는 **세분류(Task-specific classification)**에 대해서만 학습을 진행
+<img width="300" alt="Image" src="https://github.com/user-attachments/assets/7db9664f-ec5f-41ee-89bb-ad9b508d8214" /> 
 
-### 2. 실험 방법
+## 2. 실험 방법
+본 연구에서는 두 가지 방식으로 모델을 학습시켰습니다.
 
-두 가지 방식으로 모델 학습시켰음
-1. top3가 아닌 하나의 라벨로 분류해주는 모델 학습(multiclass classification)
-- 분류 모델의 정확도를 위해서 2년도 1~3월 뉴스기사를 활용(백만건) 중 라벨이 하나인 기사만을 필터링하여 2 epoch 학습을 진행함 
-2. 한 기사를 여러 라벨로 분류해주는 모델 학습(multilabel classification)
-- 학습 시간이 방대한 관계로 22년도 1~3월 뉴스기사를 활용(백만건)하여 2 epoch 학습을 진행함
+### 2.1 Multiclass Classification (단일 라벨 분류)
+- 뉴스 기사를 하나의 라벨로 분류하는 모델
+- 모델의 정확도를 높이기 위해 **2020년도 1~3월 뉴스 기사 (백만 건)** 중 **단일 라벨 기사만을 필터링**하여 학습
+- **2 Epoch** 동안 학습 진행
+
+### 2.2 Multilabel Classification (다중 라벨 분류)
+- 한 기사를 여러 개의 라벨로 분류하는 모델
+- 학습 시간이 방대하여 **2022년도 1~3월 뉴스 기사 (백만 건)**을 활용
+- **2 Epoch** 동안 학습 진행
+
+## 3. 기대사항
+KPF-BERT 모델을 활용한 뉴스 주제 분류 모델을 통해 한국어 뉴스 기사의 주제별 자동 분류가 가능할 것으로 기대됩니다. 이를 통해 뉴스 검색, 추천 시스템, 미디어 분석 등 다양한 응용 분야에서 활용될 수 있으며, 추가적인 연구를 통해 성능 개선이 가능할 것입니다.
+

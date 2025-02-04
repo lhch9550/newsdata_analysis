@@ -7,7 +7,7 @@
 - 학습 데이터는 **국립국어원의 뉴스 분류 데이터**를 활용하였음
 - 기사 내용과 분류명을 포함하여 학습 데이터를 제작
 - 본 실험에서는 **세분류(Task-specific classification)**에 대해서만 학습을 진행
-<img width="300" alt="Image" src="https://github.com/user-attachments/assets/7db9664f-ec5f-41ee-89bb-ad9b508d8214" /> 
+<img width="500" alt="Image" src="https://github.com/user-attachments/assets/7db9664f-ec5f-41ee-89bb-ad9b508d8214" /> 
 
 ## 2. 실험 방법
 본 연구에서는 두 가지 방식으로 모델을 학습시켰습니다.

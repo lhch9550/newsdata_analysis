@@ -1,6 +1,4 @@
-# Market Intelligence: 에듀테크 시장 데이터 분석
-
-## 프로젝트 개요
+# Market Intelligence:프로젝트 개요
 Market Intelligence는 에듀테크 시장의 거시적 및 미시적 동향 정보를 **데이터 기반으로 제공**하기 위한 기술 연구 프로젝트입니다. 기존 마켓 분석에서 가장 큰 걸림돌이었던 **데이터 양과 라벨링 문제**를 해결하기 위해, 초기 단계에서는 **비정형 텍스트 데이터**를 중심으로 데이터를 수집하고 분석하는 방식을 채택하고 있습니다.
 
 ## 주요 기능
@@ -22,6 +20,37 @@ Market Intelligence는 다음 **3가지 핵심 기능**을 중심으로 연구 �
 - **자연어 처리(NLP):** Named Entity Recognition (NER), 토픽 모델링, 워드 임베딩
 - **데이터 분석:** 네트워크 분석, 시각화 기법 적용
 - **대형 언어 모델(LLM):** RAG 기반 검색 및 질의응답 시스템 구축
+
+brotlipy==0.7.0
+ConfigParser==7.1.0
+cryptography==44.0.0
+Cython==0.29.21
+dl==0.1.0
+HTMLParser==0.0.2
+ipaddr==2.2.0
+JPype1==1.5.0
+keyring==21.2.1
+kiwipiepy==0.20.3
+kss.core==1.6.5
+langchain_core==0.3.33
+langchain_openai==0.3.3
+lxml==4.5.2
+numpy==1.24.4
+ordereddict==1.1
+pandas==2.0.3
+protobuf==3.20.3
+pyOpenSSL==25.0.0
+python-dotenv==1.0.1
+pytorch_lightning==2.4.0
+scikit_learn==1.3.2
+seqeval==1.2.2
+streamlit==1.35.0
+thread==2.0.5
+torch==2.4.1
+tqdm==4.66.1
+transformers==4.35.2
+wincertstore==0.2.1
+xmlrpclib==1.0.1
 
 ## 기대 효과
 - 에듀테크 시장의 거시적 및 미시적 동향을 데이터 기반으로 분석하여 **의사결정 지원**

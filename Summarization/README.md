@@ -21,9 +21,6 @@ Pre-trained BERT를 문서 요약(task-specific) 모델로 활용하기 위해�
 2. 토크나이저 및 인코딩
 - kpfBERT 토크나이저 사용.
 - PreSumm 방식으로 문장 인코딩 진행.
-Token embedding: <CLS> 문장 <SEP> 문장 <SEP> ... 문장 <SEP>
-Interval segment: 0, 0, 0, 1, 1, 0, 0, ... 1, 1
-Position embedding: 1, 1, 1, 1, ... 1, 1
 
 3. 모델 학습 및 예측
 - 사전 훈련된 Kpf-BERT 모델을 기반으로 문장 추출 모델 생성.

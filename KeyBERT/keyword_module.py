@@ -8,7 +8,7 @@ from kiwipiepy import Kiwi
 kiwi = Kiwi()
 
 # 사용자 정의 BERT 모델 로드
-model_name_or_path = "/home/lhch9550/공모전"  # 사용자의 BERT 모델 경로
+model_name_or_path = ""  # 사용자의 BERT 모델 경로
 custom_model = BertModel.from_pretrained(model_name_or_path, add_pooling_layer=False)
 custom_tokenizer = BertTokenizer.from_pretrained(model_name_or_path)
 

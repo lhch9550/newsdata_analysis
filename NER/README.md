@@ -32,7 +32,8 @@ offset_mapping : 토큰의 위치정보 (ex. [(0, 0), (0, 2), (2, 3), (3, 4), (4
 
 ## 3. 모델 학습
 
-```python train.py -s TRAIN_FILE -o MODEL_NAME
+```
+python train.py -s TRAIN_FILE -o MODEL_NAME
 ```
 - kpf-bert-ner : KPF-BERT-NER 모델의 저장 위치
 - train.py : 학습 관련 코드.

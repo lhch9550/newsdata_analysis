@@ -19,7 +19,7 @@
 from dataclasses import dataclass
 
 class Config():
-    model_name: str = "/home/lhch9550/공모전/KFP-BERT-NER/NER-model"
+    model_name: str = "" #모델 경로
     train_data: str = "21_150tags_EntityLinking"
     test_data: str = "21_150tags_EntityLinking"
     epoch: int = 10#15

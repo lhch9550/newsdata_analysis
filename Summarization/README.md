@@ -30,6 +30,5 @@ Pre-trained BERT를 문서 요약(task-specific) 모델로 활용하기 위해�
 - 또한, 모델의 성능을 향상시키기 위한 추가적인 연구와 개선을 통해 보다 정교한 요약 결과를 도출할 수 있을 것입니다.
 
 ## 5. 참고 자료
-- [빅카인즈 KPF-BERTSUM 모델] (https://github.com/KPF-bigkinds/BIGKINDS-LAB/blob/main/KPF-BERTSum/README.md)
 - [관련 논문] (https://arxiv.org/abs/1908.08345)
 

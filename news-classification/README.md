@@ -15,12 +15,12 @@ KPF-BERT 모델의 CLS 토큰을 기반으로 뉴스 기사에 대한 주제 분
 ### 2.1 Multiclass Classification (단일 라벨 분류)
 - 뉴스 기사를 하나의 라벨로 분류하는 모델
 - 모델의 정확도를 높이기 위해 **2020년도 1~3월 뉴스 기사** 중 **단일 라벨 기사만을 필터링**하여 학습
-- **2 Epoch** 동안 학습 진행
+- **2 Epoch** 동안 학습 진행(추가 학습 필요)
 
 ### 2.2 Multilabel Classification (다중 라벨 분류)
 - 한 기사를 여러 개의 라벨로 분류하는 모델
 - 학습 데이터가 방대하여 **2022년도 1~3월 뉴스 기사 1백만 건**만을 활용
-- **2 Epoch** 동안 학습 진행
+- **2 Epoch** 동안 학습 진행(추가 학습 필요)
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/df851425-144d-4f7d-b232-2190ba4314d6" />
 

@@ -27,44 +27,13 @@ char_label : 단어의 클래스 <BIO표기법> (ex. ['B-OGG_ECONOMY', 'I-OGG_EC
                                             'O', 'O', 'O', 'O', 'O', 'O', 'B-QT_COUNT', 'I-QT_COUNT', 'I-QT_COUNT', 'I-QT_COUNT', 'I-QT_COUNT', 'I-QT_COUNT', 'I-QT_COUNT',
                                             'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O'])
 offset_mapping : 토큰의 위치정보 (ex. [(0, 0), (0, 2), (2, 3), (3, 4), (4, 5), (6, 8), (9, 12), (13, 14), (14, 16), (16, 17), (17, 19), (19, 20), (20, 21), (22, 24), (25, 28),
-                                (28, 29), (30, 32), (33, 35), (35, 36), (37, 38), (38, 39), (40, 42), (42, 44), (45, 47), (48, 50), (51, 53), (53, 54), (54, 55), (55, 56), (0, 0)])```
+                                (28, 29), (30, 32), (33, 35), (35, 36), (37, 38), (38, 39), (40, 42), (42, 44), (45, 47), (48, 50), (51, 53), (53, 54), (54, 55), (55, 56), (0, 0)])
+```
 
-## 학습
+## 모델 학습
 
 python train.py -s TRAIN_FILE -o MODEL_NAME
 (ex. python train.py -s dataset/NXEL2102203310.json -o kpf-bert-ner)
 kpf-bert-ner : KPF-BERT-NER 모델의 저장 위치
 train.py : 학습 관련 코드.
 실행에 필요한 파일 : label.py, config.py, Dataset.py, kpfbert 모델 폴더가 있어야함.
-
-## 학습데이터의 입력값과 출력값
-
-Predictions
-
-ner_module.py의 ner_predict(text)를 사용하여 text에 기사 전문을 넣어 출력값을 word, label, desc json의 list 형태로 추출할 수 있다.
-
-# huggingface 개체명 인식 모델 불러오기
-model = BertForTokenClassification.from_pretrained("KPF/KPF-bert-ner")
-위 코드에서 모델은 huggingface에 만들어진 모델을 사용하여 예측합니다.
-
-예시)
-
-입력문장
-
-여야 원내대표가 16일 오후 김진표 국회의장 주재로 다시 얼굴을 맞대고 내년도 예산안 협상을 이어갔지만 기존 입장만 되풀이하며 진전을 보지 못했다.
-이날 회동은 전날 김 의장이 내놓은 중재안을 국민의힘이 받아들이지 않으면서, 예산안 협상이 또 불발된 이후 첫 만남이었다.
-양당 원내대표는 이날도 서로에게 '양보'를 요구하며 지루한 대치 국면을 이어갔다.
-국민의힘 주호영 원내대표는 "예산안 처리 법정 기한과 정기국회 기간이 도과한 지 꽤 됐는데도 불구하고 내년도 예산안을 합의 처리 못 해 국민께 죄송하다"며 입을 열었다.
-이어 "헌법이나 법률에도 예산 편성과 운영에는 정부에 주도권을 주고 있다"며 "정부가 위기의 순간에 빠르게, 계획대로 재정 운용을 집행할 수 있게 협조해 달라고 민주당에 간곡히 부탁드린다"고 말했다.
-
-결과값
-
-[{'desc': '직위, 직책', 'label': 'CV_POSITION', 'word': '원내대표'}
-, {'desc': '날짜 절기', 'label': 'DT_DAY', 'word': '16일'}
-, {'desc': '기간', 'label': 'TI_DURATION', 'word': '오후'}
-, {'desc': '인물', 'label': 'PS_NAME', 'word': '김진표'}
-, {'desc': '직위, 직책', 'label': 'CV_POSITION', 'word': '국회의장'}
-, {'desc': '날짜 절기', 'label': 'DT_DAY', 'word': '이날'}
-, {'desc': '날짜 절기', 'label': 'DT_DAY', 'word': '전날'}
-, {'desc': '인물', 'label': 'PS_NAME', 'word': '김'}
-, ...

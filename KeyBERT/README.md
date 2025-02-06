@@ -51,13 +51,6 @@ KeyBERT는 **BERT 임베딩을 활용하여 문서에서 의미적으로 중요�
 - **BERT 기반 의미론적 키워드 추출을 통해 기존 TF-IDF 방식 대비 높은 성능 확보**
 - **핵심 키워드를 기반으로 한 여러 분석 기법 적용(예: 토픽모델링)을 위한 재료 확보**
 
-## 5. 실행 방법
-```sh
-pip install keybert
-pip install transformers
-python keybert_extraction.py
-```
-
 ## 참고 자료
 - [KeyBERT 공식 문서](https://github.com/MaartenGr/KeyBERT)
 - [BERT 기반 키워드 추출 알고리즘 개요](https://heeya-stupidbutstudying.tistory.com/entry/DL-keyword-extraction-with-KeyBERT-%EA%B0%9C%EC%9A%94%EC%99%80-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-1)

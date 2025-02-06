@@ -11,13 +11,10 @@
 
 - 모델 전처리 과정은 학습 데이터(json 파일)를 불러오고 해당 파일 중에 필요한 정보로 파싱한다. 국립국어원 데이터셋의 경우, csv 형태로 제공하고 있어 별도로 json 형식으로 변환해야 한다. 
 - 해당 정보들은 토크나이저를 통해 문장 내에서의 토큰의 위치, 세그먼트, ID 등으로 다시 구분하며 토큰별로 BIO 표기법 형태에 맞춰 표기한다. 그 후 학습을 위해 tensor 형태로 변환하여 저장한다. 
-
-Dataset.py에서 데이터 전처리 과정을 진행한다.
-
-- NerDataset : ner dataset 클래스. (torch의 dataset 라이브러리 사용, 해당 문서 참고)
-- load_data : 말뭉치 데이터(dict)에 맞게 필요한 정보를 추출하는 함수. 정보를 추출하고 BIO 표기법으로 분류 후 모델의 input 형태로 변형함.
-- collate_fn : 학습에 사용할 수 있도록 torch 라이브러리를 사용하여 타입을 변형시키고 매칭시켜줌.
-말뭉치 데이터를 받아 학습에 필요한 input 형태로 변환.
+- Dataset.py에서 데이터 전처리 과정을 진행한다.
+  - NerDataset : ner dataset 클래스. (torch의 dataset 라이브러리 사용, 해당 문서 참고)
+  - load_data : 말뭉치 데이터(dict)에 맞게 필요한 정보를 추출하는 함수. 정보를 추출하고 BIO 표기법으로 분류 후 모델의 input 형태로 변형함.
+  - collate_fn : 학습에 사용할 수 있도록 torch 라이브러리를 사용하여 타입을 변형시키고 매칭시켜줌.
 
 ```sentence : 문장 (ex. "아디다스의 대표 운동화 '스탠스미스'가 연간 800만 켤레 팔리는 것과 비교하면 놀랄 만한 실적이다")
 token_label : 토큰의 클래스 (ex. ['B-OGG_ECONOMY', 'I-OGG_ECONOMY', 'I-OGG_ECONOMY', 'O', 'O', 'O', 'O', 'B-AFW_OTHER_PRODUCTS', 'I-AFW_OTHER_PRODUCTS',

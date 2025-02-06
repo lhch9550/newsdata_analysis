@@ -3,7 +3,7 @@
 ## 1. 모델 및 데이터
 KPF-BERT 모델의 CLS 토큰을 기반으로 뉴스 기사에 대한 주제 분류(Task)를 수행할 수 있는 분류 모델입니다.
 
-- 기존 KPF-BERT 모델과 토크나이저는 허깅페이스를 통해 다운로드:[링크]([https://github.com/KPF-bigkinds/BIGKINDS-LAB/blob/main/KPF-BERT-CLS/README.md](https://huggingface.co/KPF/KPF-bert-cls2)) 참조
+- 기존 KPF-BERT 모델과 토크나이저는 허깅페이스를 통해 다운로드:[빅카이즈 허깅페이스 링크]([https://huggingface.co/KPF/KPF-bert-cls2]) 참조
 - 학습 데이터는 **국립국어원의 모두의 말뭉치의 신문 말뭉치 데이터**를 활용하였음
 - 기사 내용과 분류명을 포함하여 학습 데이터를 제작
 - 본 실험에서는 **세분류(Task-specific classification)**에 대해서만 학습을 진행

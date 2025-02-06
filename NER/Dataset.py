@@ -5,7 +5,7 @@ import torch
 import label
 
 max_length = 128
-tokenizer = AutoTokenizer.from_pretrained("/home/lhch9550/공모전/KFP-BERT-NER/NER-model")# 사용자의 BERT 모델 경로
+tokenizer = AutoTokenizer.from_pretrained("")# 사용자의 BERT 모델 경로
 
 #########################################################################################################################
 """

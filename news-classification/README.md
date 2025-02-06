@@ -1,7 +1,7 @@
-# KPF-BERT 사전학습 모델을 활용한 뉴스 주제 분류 모델 구현
+# KPF-BERT 사전학습 모델을 활용한 뉴스 주제 분류 모델
 
 ## 1. 모델 및 데이터
-KPF-BERT 모델의 CLS 토큰을 기반으로 뉴스 기사에 대한 주제 분류(Task)를 수행할 수 있는 분류 모델을 위한 코드를 작성하였습니다.
+KPF-BERT 모델의 CLS 토큰을 기반으로 뉴스 기사에 대한 주제 분류(Task)를 수행할 수 있는 분류 모델입니다.
 
 - 기존 KPF-BERT 모델과 토크나이저는 Git을 통해 다운로드:[빅카인즈 참조](https://github.com/KPF-bigkinds/BIGKINDS-LAB/blob/main/KPF-BERT-CLS/README.md) 참조
 - 학습 데이터는 **국립국어원의 뉴스 분류 데이터**를 활용하였음

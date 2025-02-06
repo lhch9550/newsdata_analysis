@@ -7,10 +7,9 @@ Pre-trained BERT를 문서 요약(task-specific) 모델로 활용하기 위해�
 BERTSum은 입력 문서의 각 문장 앞에 [CLS] 토큰을 삽입하고, 문장마다 고유한 segment embeddings을 부여하는 **interval segment embeddings** 기법을 적용합니다. 이를 통해 BERT가 문서 내 개별 문장의 관계를 보다 정교하게 학습할 수 있도록 합니다. 기존 BERT는 MLM(Masked Language Model) 방식으로 훈련되었기 때문에 출력 벡터가 토큰 단위로 생성됩니다. 이러한 한계를 극복하고자 요약 태스크에서는 **문장 수준의 표현을 다룰 수 있도록 BERT의 입력 데이터 형태를 수정**하여 사용합니다.
 
 ## 2. 모델 적용 및 학습
-- 본 실험에서는 해당 모델을 통해 뉴스 기사를 요약하였으며, **한국언론진흥재단(KPF)에서 구축한 뉴스기사 말뭉치로 학습한 KPF-BERT**를 사용하였습니다. 
-- KPF-BERTSum은 **KPF-BERT Text Summarization**의 준말로, BERT 사전학습 모델을 이용한 **뉴스 기사 3줄 요약**을 생성하는 모델입니다.
-- 모델은 [빅카인즈 깃허브](https://github.com/KPFBERT/kpfbert)에서 다운로드 가능합니다. 
-- 파인튜닝에 필요한 한국어 데이터셋은 **AI-HUB에서 제공하는 문서 요약 텍스트**를 활용하였습니다. 
+- **한국언론진흥재단(KPF)에서 구축한 뉴스기사 말뭉치로 학습한 KPF-BERT**를 사용
+- 모델은 [빅카인즈 깃허브](https://github.com/KPFBERT/kpfbert)에서 다운로드 가능 
+- 파인튜닝에 필요한 한국어 데이터셋은 **AI-HUB에서 제공하는 문서 요약 텍스트**를 활용 
 
 ## 3. 실험 방법
 ### 데이터셋 업로드 및 전처리

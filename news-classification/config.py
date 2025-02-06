@@ -19,6 +19,7 @@
 
 from dataclasses import dataclass
 
+######## 아래 주석 처리된 부분은 단일 주제 분류일 경우 #######
 #class Config():
 #    model_name: str = "" # 모델 경로
 #    train_data: str = "21_150tags_EntityLinking"
@@ -36,7 +37,7 @@ from dataclasses import dataclass
 
 class Config():
     # 모델 설정
-    model_name: str = "/home/lhch9550/공모전/KPF-BERT-CLS/cls_model"
+    model_name: str = "" # 모델 경로
     
     # 데이터 설정
     train_data: str = "21_150tags_EntityLinking"
